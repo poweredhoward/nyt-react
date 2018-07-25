@@ -8,7 +8,8 @@ router.post("/articles", function(req, res){
   Article.create({
     title: req.body.title.title,
     date: req.body.date.date,
-    url: req.body.url.url
+    url: req.body.url.url,
+    snippet: req.body.snippet.snippet
   }).then(result =>{
     console.log(result);
     res.send(result);

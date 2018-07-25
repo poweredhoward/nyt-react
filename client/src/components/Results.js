@@ -12,6 +12,7 @@ const Results = props => {
                     title={article.headline.main}
                     date={article.pub_date}
                     url={article.web_url}
+                    snippet={article.snippet}
                     savefunction={props.savefunction}
                     />
                 }

@@ -66,12 +66,15 @@ class Main extends React.Component{
     }
 
     save = params =>{
+        console.log("params:");
+        console.log(params);
        
         axios.post("/articles",{
             
                 title: params.t,
                 date: params.d,
                 url: params.u,
+                snippet: params.s
             }
         ).then(res => {
             console.log(res);

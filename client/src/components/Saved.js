@@ -8,12 +8,16 @@ const Saved = props =>{
             {
                 props.articles.map((article, k) =>{
                     return( 
-                        <div key={k}>
-                            <h3>{article.title}</h3>
-                            <p>{article.url}</p>
-                            <p>{article.date.split("T")[0]}</p>
+                        <div key={k} className="panel panel-default">
+                        <div className="panel-heading">
+                            <a href={article.url}><h3>{article.title}</h3></a>
+                        </div>
+                        <div className="panel-body">
+                            <p>{article.snippet}</p>
+                            <p>Published on {article.date.split("T")[0]}</p>
 
                             <button onClick={() => props.click(article.title)}> Delete </button>
+                        </div>
                         </div>
                     )
                 })
